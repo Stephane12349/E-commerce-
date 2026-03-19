@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Royale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+        .circles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+        .circles li { position: absolute; display: block; list-style: none; width: 20px; height: 20px; background: rgba(255, 255, 255, 0.2); animation: animate 25s linear infinite; bottom: -150px; }
+        @keyframes animate { 0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0; } 100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; } }
+        .card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 40px; border-radius: 20px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); width: 400px; text-align: center; color: white; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 12px 15px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 10px; color: white; outline: none; }
+        button { width: 100%; padding: 15px; border: none; border-radius: 10px; background: #fff; color: #764ba2; font-weight: 600; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #f0f0f0; transform: translateY(-2px); }
+        #welcome-message { display: none; margin-top: 20px; padding: 20px; background: rgba(255, 255, 255, 0.2); border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <ul class="circles">
+        <li style="left: 25%; width: 80px; height: 80px; animation-delay: 0s;"></li>
+        <li style="left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s;"></li>
+        <li style="left: 70%; width: 20px; height: 20px; animation-delay: 4s;"></li>
+    </ul>
+
+    <div class="card">
+        <h1>Joyeux Anniversaire</h1>
+        <p style="margin-bottom: 20px;">Inscrivez-vous pour la fête</p>
+        
+        <form id="birthdayForm" action="https://formspree.io/f/mwvrogng" method="POST">
+            <div class="form-group">
+                <label>Prénom</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Ex: Jean" required>
+            </div>
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" name="nom" id="nom" placeholder="Ex: Dupont" required>
+            </div>
+            <div class="form-group">
+                <label>Âge</label>
+                <input type="number" name="age" id="age" placeholder="Ex: 25" required>
+            </div>
+            <button type="submit">Confirmer ma présence</button>
+        </form>
+
+        <div id="welcome-message">
+            <h3 id="msg-text"></h3>
+            <p>On a hâte de fêter ça avec toi ! 🎉</p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('birthdayForm');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            
+            // Envoi des données vers Formspree
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                const prenom = document.getElementById('prenom').value;
+                const age = document.getElementById('age').value;
+                form.style.display = 'none';
+                document.getElementById('welcome-message').style.display = 'block';
+                document.getElementById('msg-text').innerHTML = `Bienvenue, ${prenom} ! <br> ${age} ans, ça se fête !`;
+            } else {
+                alert("Oups ! Une erreur est survenue.");
+            }
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Royale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+        .circles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+        .circles li { position: absolute; display: block; list-style: none; width: 20px; height: 20px; background: rgba(255, 255, 255, 0.2); animation: animate 25s linear infinite; bottom: -150px; }
+        @keyframes animate { 0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0; } 100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; } }
+        .card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 40px; border-radius: 20px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); width: 400px; text-align: center; color: white; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; }
+        input { width: 100%; padding: 12px 15px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 10px; color: white; outline: none; }
+        button { width: 100%; padding: 15px; border: none; border-radius: 10px; background: #fff; color: #764ba2; font-weight: 600; cursor: pointer; }
+        #welcome-message { display: none; margin-top: 20px; padding: 20px; background: rgba(255, 255, 255, 0.2); border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <ul class="circles">
+        <li style="left: 25%; width: 80px; height: 80px; animation-delay: 0s;"></li>
+        <li style="left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s;"></li>
+        <li style="left: 70%; width: 20px; height: 20px; animation-delay: 4s;"></li>
+    </ul>
+
+    <div class="card">
+        <h1>Joyeux Anniversaire</h1>
+        <p style="margin-bottom: 20px;">Inscrivez-vous pour la fête</p>
+        
+        <form id="birthdayForm" action="https://formspree.io/f/mwvrogng" method="POST">
+            <div class="form-group">
+                <label>Prénom</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Ex: Jean" required>
+            </div>
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" name="nom" id="nom" placeholder="Ex: Dupont" required>
+            </div>
+            <div class="form-group">
+                <label>Âge</label>
+                <input type="number" name="age" id="age" placeholder="Ex: 25" required>
+            </div>
+            <button type="submit">Confirmer ma présence</button>
+        </form>
+
+        <div id="welcome-message">
+            <h3 id="msg-text"></h3>
+            <p>On a hâte de fêter ça avec toi ! 🎉</p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('birthdayForm');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            
+            // Envoi à Formspree
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                const prenom = document.getElementById('prenom').value;
+                const age = document.getElementById('age').value;
+                form.style.display = 'none';
+                document.getElementById('welcome-message').style.display = 'block';
+                document.getElementById('msg-text').innerHTML = `Bienvenue, ${prenom} ! <br> ${age} ans, ça se fête !`;
+            } else {
+                alert("Erreur lors de l'envoi.");
+            }
+        });
+    </script>
+</body>
+</html>
