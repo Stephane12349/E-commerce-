@@ -3,201 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GENTLEMAN STORE | Mode & Accessoires</title>
+    <title>Gentleman Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-gray-900">
 
-    <div class="bg-black text-white text-center py-2 text-xs uppercase tracking-widest font-bold">
-        Livraison gratuite dès 100f d'achat
-    </div>
+    <header class="border-b py-6 text-center">
+        <h1 class="text-3xl font-black uppercase tracking-widest">Gentleman Store</h1>
+    </header>
 
-    <nav class="border-b sticky top-0 z-50 bg-white/90 backdrop-blur-md">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter uppercase">Gentleman<span class="text-orange-600">.</span></div>
-            <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
-                <a href="#" class="hover:text-orange-600 transition">Vêtements</a>
-                <a href="#" class="hover:text-orange-600 transition">Montres</a>
-                <a href="#" class="hover:text-orange-600 transition">Accessoires</a>
-                <a href="#" class="text-red-600">Soldes</a>
-            </div>
-            <div class="flex items-center space-x-6">
-                <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-orange-600"></i>
-                <div class="relative cursor-pointer group">
-                    <i class="fa-solid fa-cart-shopping text-xl group-hover:text-orange-600"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-black text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <section class="relative h-[70vh] flex items-center bg-gray-900 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&w=1500&q=80" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Style Homme">
-        <div class="container mx-auto px-6 relative z-10 text-white">
-            <h1 class="text-6xl md:text-8xl font-black uppercase leading-none mb-4">L'Élégance<br>Au Masculin</h1>
-            <p class="text-lg md:text-xl max-w-md mb-8 font-light text-gray-300">Découvrez notre sélection exclusive de prêt-à-porter et horlogerie de luxe.</p>
-            <div class="flex space-x-4">
-                <a href="#shop" class="bg-white text-black px-10 py-4 font-bold uppercase text-sm hover:bg-orange-600 hover:text-white transition shadow-lg">Voir la collection</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 bg-gray-50 border-b">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="group relative overflow-hidden h-48 flex items-center justify-center cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&w=600&q=80" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-80" alt="Costumes">
-                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
-                <h3 class="relative text-white font-black uppercase text-2xl">Costumes</h3>
-            </div>
-            <div class="group relative overflow-hidden h-48 flex items-center justify-center cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a1b?auto=format&fit=crop&w=600&q=80" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-80" alt="Montres">
-                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
-                <h3 class="relative text-white font-black uppercase text-2xl">Montres</h3>
-            </div>
-            <div class="group relative overflow-hidden h-48 flex items-center justify-center cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&w=600&q=80" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-80" alt="Sacs">
-                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
-                <h3 class="relative text-white font-black uppercase text-2xl">Accessoires</h3>
-            </div>
-        </div>
-    </section>
-
-    <main id="shop" class="container mx-auto px-6 py-20">
-        <div class="flex justify-between items-end mb-12">
-            <div>
-                <span class="text-orange-600 font-bold uppercase tracking-widest text-sm">Best Sellers</span>
-                <h2 class="text-4xl font-black uppercase">Articles Tendance</h2>
-            </div>
-            <a href="#" class="border-b-2 border-black font-bold pb-1 hover:text-orange-600 hover:border-orange-600 transition">Tout voir</a>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div class="group">
-                <div class="relative overflow-hidden bg-gray-100 mb-4">
-                    <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80" alt="Montre" class="w-full h-80 object-cover transition duration-700 group-hover:scale-105">
-                    <button onclick="updateCart()" class="absolute bottom-0 left-0 right-0 bg-black text-white py-4 translate-y-full group-hover:translate-y-0 transition font-bold uppercase text-xs tracking-widest">
-                       
-                    </button>
-              <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20le%20Chronographe%20Acier%20vu%20sur%20votre%20site" 
-   target="_blank" 
-   style="background-color: #25D366; color: white; display: block; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px; font-family: sans-serif;">
-   <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
-</a>
-                </div>
-                <h3 class="font-bold text-gray-900 uppercase tracking-tight">Chronographe Acier</h3>
-                <p class="text-gray-500 text-sm mb-2">Mouvement Quartz Japonais</p>
-                <span class="font-black text-lg text-orange-600">5000f</span>
-            </div>
-               
-            <div class="group">
-                <div class="relative overflow-hidden bg-gray-100 mb-4">
-                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80" alt="Vêtement" class="w-full h-80 object-cover transition duration-700 group-hover:scale-105">
-                   <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20la%20Chemise%20Oxford" 
-   target="_blank" 
-   style="background-color: #25D366; color: white; display: block; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px;">
-   <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
-</a>
-                    </button>
-                </div>
-                <h3 class="font-bold text-gray-900 uppercase tracking-tight">Chemise Oxford Slim</h3>
-                <p class="text-gray-500 text-sm mb-2">100% Coton Premium</p>
-                <span class="font-black text-lg text-orange-600">5000f</span>
-            </div>
-
-            <div class="group">
-                <div class="relative overflow-hidden bg-gray-100 mb-4">
-                 <img src="mont.jpg" alt="Ma Montre" class="w-full h-80 object-cover transition duration-700 group-hover:scale-105">
-                  <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20la%20Montre%20de%20Luxe%20vue%20sur%20votre%20site" 
-   target="_blank" 
-   style="background-color: #25D366; color: white; display: block; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px;">
-   <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
-</a>
-                       
-                    </button>
-                </div>
-                <h3 class="montre en cilycone">montre de sport</h3>
-                <p class="text-gray-500 text-sm mb-2">montre en cilyconne</p>
-                <span class="font-black text-lg text-orange-600">5000f</span>
-            </div>
-<div class="group">
+    <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+        
+        <div class="group">
             <div class="relative overflow-hidden bg-gray-100 mb-4">
-                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80" alt="Lunettes" class="w-full h-80 object-cover transition duration-700 group-hover:scale-105">
-                <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20les%20Lunettes%20Aviateur" 
+                <img src="montre.jpg" alt="Chronographe" class="w-full h-80 object-cover">
+                <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20le%20Chronographe%20Acier" 
                    target="_blank" 
                    style="background-color: #25D366; color: white; display: block; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px;">
                    <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
                 </a>
             </div>
-            <h3 class="font-bold text-gray-900 uppercase tracking-tight">Lunettes Aviateur Classique</h3>
-            <p class="text-gray-500 text-sm mb-2">Protection UV400 - Monture Dorée</p>
-            <span class="font-black text-lg text-orange-600">15.000 F CFA</span>
+            <h3 class="font-bold uppercase">Chronographe Acier</h3>
+            <p class="text-gray-500 text-sm">Mouvement Quartz Japonais</p>
+            <span class="font-black text-orange-600">5000f</span>
         </div>
-            <div class="group">
-                <div class="relative overflow-hidden bg-gray-100 mb-4">
-                    <img src="https://images.unsplash.com/photo-1511499767390-90339045296d?auto=format&fit=crop&w=600&q=80" alt="Lunettes" class="w-full h-80 object-cover transition duration-700 group-hover:scale-105">
-                  <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20les%20Lunettes%20Aviateur" 
-          <img src="mont.jpg"
-    <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20le%20Chronographe%20Acier%20vu%20sur%20votre%20site" 
-   target="_blank" 
-   style="background-color: #25D366; color: white; display: block; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px; font-family: sans-serif;">
-   <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
-</a>
-                    </button>
-                </div>
-              
-            </div>
-        </div>
-    </main>
 
-    <footer class="bg-black text-gray-400 py-16">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div class="col-span-1 md:col-span-2 text-white">
-                <div class="text-3xl font-black uppercase mb-6">Gentleman<span class="text-orange-600">.</span></div>
-                <p class="max-w-xs text-gray-500 italic mb-6">La destination ultime pour l'homme moderne qui ne fait aucun compromis sur le style.</p>
-                <div class="flex space-x-4 text-xl">
-                    <i class="fa-brands fa-instagram hover:text-orange-600 cursor-pointer"></i>
-                    <i class="fa-brands fa-facebook hover:text-orange-600 cursor-pointer"></i>
-                    <i class="fa-brands fa-tiktok hover:text-orange-600 cursor-pointer"></i>
-                </div>
+        <div class="group">
+            <div class="relative overflow-hidden bg-gray-100 mb-4">
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80" alt="Chemise" class="w-full h-80 object-cover">
+                <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20la%20Chemise%20Oxford" 
+                   target="_blank" 
+                   style="background-color: #25D366; color: white; display: block; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px;">
+                   <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
+                </a>
             </div>
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Aide</h4>
-                <ul class="space-y-2 text-sm">
-                    <li class="hover:text-white transition cursor-pointer">Suivi de commande</li>
-                    <li class="hover:text-white transition cursor-pointer">Livraisons</li>
-                    <li class="hover:text-white transition cursor-pointer">Retours & Échanges</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Contact</h4>
-                <ul class="space-y-2 text-sm text-gray-500">
-                    <li>support@gentleman.com</li>
-                    <li>+225 0757752894</li>
-                    <li>abidjan, cote d ivoire</li>
-                </ul>
-            </div>
+            <h3 class="font-bold uppercase">Chemise Oxford Slim</h3>
+            <p class="text-gray-500 text-sm">100% Coton Premium</p>
+            <span class="font-black text-orange-600">5000f</span>
         </div>
-    </footer>
 
-    <script>
-        let cartItems = 0;
-        function updateCart() {
-            cartItems++;
-            document.getElementById('cart-count').innerText = cartItems;
-            // Effet visuel simple
-            const btn = event.target;
-            btn.innerText = "Ajouté ✓";
-            btn.classList.replace('bg-black', 'bg-orange-600');
-            setTimeout(() => {
-                btn.innerText = "Ajouter au panier";
-                btn.classList.replace('bg-orange-600', 'bg-black');
-            }, 2000);
-        }
-    </script>
+    </div>
 </body>
 </html>
+ 
