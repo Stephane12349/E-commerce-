@@ -3,47 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gentleman Store</title>
+    <title>Gentleman Store | La Collection Complète</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .wa-button { background-color: #25D366; color: white; display: block; text-align: center; padding: 12px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px; transition: 0.3s; }
+        .wa-button:hover { background-color: #128C7E; transform: scale(1.02); }
+    </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-gray-50 text-gray-900">
 
-    <header class="border-b py-6 text-center">
-        <h1 class="text-3xl font-black uppercase tracking-widest">Gentleman Store</h1>
+    <header class="bg-white border-b sticky top-0 z-50 py-6 shadow-sm text-center">
+        <h1 class="text-3xl font-black uppercase tracking-widest text-black">Gentleman Store</h1>
+        <p class="text-xs text-gray-500 mt-2 tracking-widest">ÉLÉGANCE • QUALITÉ • STYLE</p>
     </header>
 
-    <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         
-        <div class="group">
-            <div class="relative overflow-hidden bg-gray-100 mb-4">
-                <img src="montre.jpg" alt="Chronographe" class="w-full h-80 object-cover">
-                <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20le%20Chronographe%20Acier" 
-                   target="_blank" 
-                   style="background-color: #25D366; color: white; display: block; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px;">
-                   <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
-                </a>
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="montre.jpg" class="w-full h-72 object-cover rounded-lg" alt="Montre Luxe">
+            <h3 class="font-bold mt-4 uppercase">Chronographe Acier Royal</h3>
+            <p class="text-gray-500 text-sm">Mouvement Quartz Premium</p>
+            <div class="flex justify-between items-center mt-2">
+                <span class="font-black text-orange-600 text-xl">25.000 F</span>
             </div>
-            <h3 class="font-bold uppercase">Chronographe Acier</h3>
-            <p class="text-gray-500 text-sm">Mouvement Quartz Japonais</p>
-            <span class="font-black text-orange-600">5000f</span>
+            <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20veux%20la%20Montre%20Acier%20Royal" target="_blank" class="wa-button">
+                <i class="fab fa-whatsapp"></i> Commander
+            </a>
         </div>
 
-        <div class="group">
-            <div class="relative overflow-hidden bg-gray-100 mb-4">
-                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80" alt="Chemise" class="w-full h-80 object-cover">
-                <a href="https://wa.me/2250757752894?text=Bonjour%20Gentleman%20Store,%20je%20souhaite%20commander%20la%20Chemise%20Oxford" 
-                   target="_blank" 
-                   style="background-color: #25D366; color: white; display: block; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; border-radius: 5px; margin-top: 10px;">
-                   <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
-                </a>
-            </div>
-            <h3 class="font-bold uppercase">Chemise Oxford Slim</h3>
-            <p class="text-gray-500 text-sm">100% Coton Premium</p>
-            <span class="font-black text-orange-600">5000f</span>
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600" class="w-full h-72 object-cover rounded-lg" alt="Chemise">
+            <h3 class="font-bold mt-4 uppercase">Chemise Oxford Slim</h3>
+            <p class="text-gray-500 text-sm">100% Coton Égyptien</p>
+            <span class="font-black text-orange-600 text-xl">15.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20la%20Chemise%20Oxford" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600" class="w-full h-72 object-cover rounded-lg" alt="Lunettes">
+            <h3 class="font-bold mt-4 uppercase">Lunettes Aviateur Or</h3>
+            <p class="text-gray-500 text-sm">Protection UV400 Polarisé</p>
+            <span class="font-black text-orange-600 text-xl">12.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20les%20Lunettes%20Aviateur" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600" class="w-full h-72 object-cover rounded-lg" alt="Chaussures">
+            <h3 class="font-bold mt-4 uppercase">Mocassins Cuir Noir</h3>
+            <p class="text-gray-500 text-sm">Cuir véritable fait main</p>
+            <span class="font-black text-orange-600 text-xl">35.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20les%20Mocassins%20Noirs" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600" class="w-full h-72 object-cover rounded-lg" alt="Parfum">
+            <h3 class="font-bold mt-4 uppercase">Eau de Parfum "Oud"</h3>
+            <p class="text-gray-500 text-sm">Fragrance intense 100ml</p>
+            <span class="font-black text-orange-600 text-xl">45.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Parfum%20Oud" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1547949003-9792a18a2601?w=600" class="w-full h-72 object-cover rounded-lg" alt="Sac">
+            <h3 class="font-bold mt-4 uppercase">Sac de Voyage Vintage</h3>
+            <p class="text-gray-500 text-sm">Toile et Finition Cuir</p>
+            <span class="font-black text-orange-600 text-xl">28.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Sac%20de%20Voyage" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1624222247344-550fb8ec5521?w=600" class="w-full h-72 object-cover rounded-lg" alt="Ceinture">
+            <h3 class="font-bold mt-4 uppercase">Ceinture Réversible</h3>
+            <p class="text-gray-500 text-sm">Noir / Marron - Boucle Inox</p>
+            <span class="font-black text-orange-600 text-xl">10.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20la%20Ceinture" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=600" class="w-full h-72 object-cover rounded-lg" alt="Portefeuille">
+            <h3 class="font-bold mt-4 uppercase">Portefeuille Minimaliste</h3>
+            <p class="text-gray-500 text-sm">Protection RFID - Cuir</p>
+            <span class="font-black text-orange-600 text-xl">8.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Portefeuille" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1520e?w=600" class="w-full h-72 object-cover rounded-lg" alt="Bracelet">
+            <h3 class="font-bold mt-4 uppercase">Bracelet Pierre de Lave</h3>
+            <p class="text-gray-500 text-sm">Accessoire Homme Élégant</p>
+            <span class="font-black text-orange-600 text-xl">5.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Bracelet" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1589756823695-278bc923f962?w=600" class="w-full h-72 object-cover rounded-lg" alt="Cravate">
+            <h3 class="font-bold mt-4 uppercase">Set Cravate Soie</h3>
+            <p class="text-gray-500 text-sm">Avec pochette et boutons de manchette</p>
+            <span class="font-black text-orange-600 text-xl">12.500 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Set%20Cravate" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" class="w-full h-72 object-cover rounded-lg" alt="Veste">
+            <h3 class="font-bold mt-4 uppercase">Blazer Modern Fit</h3>
+            <p class="text-gray-500 text-sm">Idéal pour vos soirées pro</p>
+            <span class="font-black text-orange-600 text-xl">40.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Blazer" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600" class="w-full h-72 object-cover rounded-lg" alt="Polo">
+            <h3 class="font-bold mt-4 uppercase">Polo Classic Blanc</h3>
+            <p class="text-gray-500 text-sm">Coton piqué respirant</p>
+            <span class="font-black text-orange-600 text-xl">12.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Polo%20Blanc" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600" class="w-full h-72 object-cover rounded-lg" alt="Jean">
+            <h3 class="font-bold mt-4 uppercase">Jean Brut Premium</h3>
+            <p class="text-gray-500 text-sm">Coupe droite confortable</p>
+            <span class="font-black text-orange-600 text-xl">18.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Jean%20Brut" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?w=600" class="w-full h-72 object-cover rounded-lg" alt="Chapeau">
+            <h3 class="font-bold mt-4 uppercase">Chapeau Fedora Noir</h3>
+            <p class="text-gray-500 text-sm">Style Gentleman Classique</p>
+            <span class="font-black text-orange-600 text-xl">15.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Chapeau%20Fedora" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border">
+            <img src="https://images.unsplash.com/photo-1554126807-6b10f6f6692a?w=600" class="w-full h-72 object-cover rounded-lg" alt="Noeud">
+            <h3 class="font-bold mt-4 uppercase">Noeud Papillon Velours</h3>
+            <p class="text-gray-500 text-sm">Élégance pour cérémonies</p>
+            <span class="font-black text-orange-600 text-xl">7.000 F</span>
+            <a href="https://wa.me/2250757752894?text=Je%20commande%20le%20Noeud%20Papillon" target="_blank" class="wa-button"><i class="fab fa-whatsapp"></i> Commander</a>
         </div>
 
     </div>
+
+    <footer class="bg-white py-10 border-t text-center">
+        <p class="text-gray-500">© 2026 Gentleman Store - Abidjan, Côte d'Ivoire</p>
+    </footer>
+
 </body>
 </html>
- 
