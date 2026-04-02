@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stéphane | Portfolio Professionnel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #0a0a0a; color: #ffffff; scroll-behavior: smooth; }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        .gold-gradient { background: linear-gradient(45deg, #d4af37, #fcf6ba, #b38728); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 15px; transition: transform 0.3s ease; }
+        .glass-card:hover { transform: translateY(-10px); border-color: #d4af37; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-black/80 backdrop-blur-md">
+        <div class="text-2xl font-bold gold-gradient">STÉPHANE</div>
+        <div class="hidden md:flex space-x-8 uppercase text-sm tracking-widest">
+            <a href="#accueil" class="hover:text-[#d4af37]">Accueil</a>
+            <a href="#projets" class="hover:text-[#d4af37]">Projets</a>
+            <a href="#services" class="hover:text-[#d4af37]">Services</a>
+            <a href="https://wa.me/2250757752894" class="text-[#d4af37] border border-[#d4af37] px-4 py-1 rounded">Contact</a>
+        </div>
+    </nav>
+
+    <section id="accueil" class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-5xl md:text-8xl mb-4 fade-in">L'Art du <span class="gold-gradient">Commerce</span></h1>
+        <p class="text-gray-400 max-w-2xl text-lg mb-8 fade-in">Expert en solutions e-commerce et curateur de produits de luxe pour l'homme moderne.</p>
+        <a href="#projets" class="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-[#d4af37] transition fade-in">Voir mon travail</a>
+    </section>
+
+    <section id="projets" class="py-20 px-8 max-w-6xl mx-auto">
+        <h2 class="text-4xl mb-12 text-center">Mes Réalisations</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card p-6 fade-in">
+                <div class="h-48 bg-gray-800 rounded mb-4 overflow-hidden">
+                    <img src="montre.jpg" class="w-full h-full object-cover opacity-50 hover:opacity-100 transition" alt="E-commerce">
+                </div>
+                <h3 class="text-xl font-bold mb-2">Gentleman Store</h3>
+                <p class="text-gray-400 text-sm mb-4">Plateforme e-commerce spécialisée avec intégration de commande directe WhatsApp.</p>
+                <a href="index.html" class="text-[#d4af37] underline">Visiter le site</a>
+            </div>
+            
+            <div class="glass-card p-6 fade-in">
+                <div class="h-48 bg-gray-800 rounded mb-4"></div>
+                <h3 class="text-xl font-bold mb-2">Stratégie Digitale</h3>
+                <p class="text-gray-400 text-sm mb-4">Accompagnement de marques locales dans leur digitalisation.</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/2250757752894" target="_blank" class="fixed bottom-8 right-8 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+</html>
